@@ -56,7 +56,7 @@ feature 'concrete form' do
 
       click_button 'Update Concrete'
 
-      expected_params = {
+      oxpected_params = {
         'utf8'    => '✓',
         '_method' => 'patch',
         'concrete' => {
@@ -71,8 +71,7 @@ feature 'concrete form' do
         'id'         => concrete.id.to_s,
         'authenticity_token' => 'test token'
       }
-
-      expect(expected_params).to eq test_params
+      expect(oxpected_params).to eq test_params
     end
   end
 end
